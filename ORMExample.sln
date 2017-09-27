@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCentric.Shared", "DriveCentric.Shared\DriveCentric.Shared.csproj", "{42B02B2C-4220-44F5-A534-903282953E8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCentric.Data", "DriveCentric.Data\DriveCentric.Data.csproj", "{5FFCB47E-F069-4428-B731-712A7A911CC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCentric.Logger", "..\LeadCrumb\DriveCentric.Logger\DriveCentric.Logger.csproj", "{B8CC47DA-C152-470E-9961-E8FAE847DEC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCentric.Services", "DriveCentric.Services\DriveCentric.Services.csproj", "{F1F47751-6D53-41F5-9488-55AE1419D96B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCentric.Business", "DriveCentric.Business\DriveCentric.Business.csproj", "{18B04458-07C6-4A63-88DE-F4191171C9D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCentric.WebApi", "DriveCentric.WebApi\DriveCentric.WebApi.csproj", "{26BD509F-E856-47EB-A60D-28873F75E307}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{42B02B2C-4220-44F5-A534-903282953E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42B02B2C-4220-44F5-A534-903282953E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42B02B2C-4220-44F5-A534-903282953E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FFCB47E-F069-4428-B731-712A7A911CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FFCB47E-F069-4428-B731-712A7A911CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FFCB47E-F069-4428-B731-712A7A911CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FFCB47E-F069-4428-B731-712A7A911CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8CC47DA-C152-470E-9961-E8FAE847DEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CC47DA-C152-470E-9961-E8FAE847DEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CC47DA-C152-470E-9961-E8FAE847DEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CC47DA-C152-470E-9961-E8FAE847DEC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F47751-6D53-41F5-9488-55AE1419D96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F47751-6D53-41F5-9488-55AE1419D96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F47751-6D53-41F5-9488-55AE1419D96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F47751-6D53-41F5-9488-55AE1419D96B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B04458-07C6-4A63-88DE-F4191171C9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B04458-07C6-4A63-88DE-F4191171C9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B04458-07C6-4A63-88DE-F4191171C9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B04458-07C6-4A63-88DE-F4191171C9D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26BD509F-E856-47EB-A60D-28873F75E307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BD509F-E856-47EB-A60D-28873F75E307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BD509F-E856-47EB-A60D-28873F75E307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BD509F-E856-47EB-A60D-28873F75E307}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

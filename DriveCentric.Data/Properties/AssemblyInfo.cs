@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DriveCentric.Shared")]
+[assembly: AssemblyTitle("DriveCentric.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DriveCentric.Shared")]
+[assembly: AssemblyProduct("DriveCentric.Data")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("42b02b2c-4220-44f5-a534-903282953e8c")]
+[assembly: Guid("5ffcb47e-f069-4428-b731-712a7a911cc5")]
 
 // Version information for an assembly consists of the following four values:
 //

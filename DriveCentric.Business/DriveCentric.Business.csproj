@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{42B02B2C-4220-44F5-A534-903282953E8C}</ProjectGuid>
+    <ProjectGuid>{18B04458-07C6-4A63-88DE-F4191171C9D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DriveCentric.Shared</RootNamespace>
-    <AssemblyName>DriveCentric.Shared</AssemblyName>
+    <RootNamespace>DriveCentric.Business</RootNamespace>
+    <AssemblyName>DriveCentric.Business</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -34,26 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.4\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,40 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\DecimalPrecisionAttribute.cs" />
-    <Compile Include="Attributes\TextAttribute.cs" />
-    <Compile Include="Enums\DatabaseSequence.cs" />
-    <Compile Include="Enums\EntityState.cs" />
-    <Compile Include="Enums\SearchParameters.cs" />
-    <Compile Include="Exceptions\DatabaseConstraintException.cs" />
-    <Compile Include="Extensions\DictionaryExtensions.cs" />
-    <Compile Include="Extensions\JsonExtensions.cs" />
-    <Compile Include="Extensions\ListExtensions.cs" />
-    <Compile Include="Extensions\MemberInfoExtensions.cs" />
-    <Compile Include="Extensions\QueryableExtensions.cs" />
-    <Compile Include="FieldLists.cs" />
-    <Compile Include="Helpers\PathHelper.cs" />
-    <Compile Include="Helpers\ReflectionHelper.cs" />
+    <Compile Include="EntityLogicBase.cs" />
+    <Compile Include="EntityLogic\CustomerLogic.cs" />
+    <Compile Include="Helpers\BusinessLogicHelper.cs" />
     <Compile Include="Interfaces\IBusinessLogic.cs" />
-    <Compile Include="Interfaces\ICanTransmogrify.cs" />
-    <Compile Include="Interfaces\IDataResponse.cs" />
-    <Compile Include="Interfaces\IEntity.cs" />
-    <Compile Include="Interfaces\IPageable.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Interfaces\ISQLUtilities.cs" />
-    <Compile Include="Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\DataResponse.cs" />
-    <Compile Include="Models\Security\Claim.cs" />
-    <Compile Include="Models\Security\Role.cs" />
-    <Compile Include="Models\Security\User.cs" />
-    <Compile Include="Models\Security\UserClaim.cs" />
-    <Compile Include="Models\Security\UserLogin.cs" />
-    <Compile Include="Models\Security\UserRole.cs" />
+    <Compile Include="Interfaces\IEntityLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\DriveCentric.Data\DriveCentric.Data.csproj">
+      <Project>{5FFCB47E-F069-4428-B731-712A7A911CC5}</Project>
+      <Name>DriveCentric.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveCentric.Shared\DriveCentric.Shared.csproj">
+      <Project>{42B02B2C-4220-44F5-A534-903282953E8C}</Project>
+      <Name>DriveCentric.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
